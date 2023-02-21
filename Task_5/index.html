@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task_5</title>
+</head>
+<body>
+		<script>
+            class Counter {
+                count(array) {
+                    const number_sum = {}
+                    array.forEach(function(number){
+                        if (number_sum[number] != undefined) {
+                            ++number_sum[number]
+                        } else {
+                            number_sum[number] = 1
+                        }
+                    })
+                    return number_sum;
+                }
+            }
+            const test = new Counter
+            console.log(test.count([1, 2, 3, 3, 1, 5]))
+
+		</script>
+</body>
+</html>

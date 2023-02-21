@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task_4</title>
+</head>
+<body>
+		<script>
+            class Dubler {
+                doubling(array) {
+                    return array.concat.apply([], array.map(function (number) { return [number, number] }))
+                }
+            }
+            const test = new Dubler;
+            console.log(test.doubling([5, 3, 7]))
+
+		</script>
+</body>
+</html>

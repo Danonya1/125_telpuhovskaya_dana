@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task_6</title>
+</head>
+<body>
+		<script>
+            class SummCalculator {
+                calculateSumm(goods_count,goods_price) {
+                    let Sum = 0
+                    for (var key in goods_count) {
+                        Sum+= goods_count[key] * goods_price[key] 
+                    }
+                    return Sum
+                }
+            }
+            const test = new SummCalculator
+            Bag = {
+                tomatoes: 1,
+                potato: 2,
+                soup: 1
+            }
+            Prices = {
+                tomatoes: 50,
+                potato: 10,
+                soup: 100
+            }
+            console.log(test.calculateSumm(Bag, Prices))
+
+		</script>
+</body>
+</html>

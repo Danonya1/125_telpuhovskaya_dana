@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task_1</title>
+</head>
+<body>
+		<script>
+			class Student {
+                #name
+                #age
+                #group
+                #mean_score
+
+            constructor(name, age, group, mean_score) {
+                this.#name = name
+                this.#age = age
+                this.#group = group
+                this.#mean_score = mean_score
+            }
+
+            get name() { 
+                return this.#name
+            }
+            set name(name) {
+                this.#name = name
+            }
+
+            get age() { 
+                return this.#age
+            }
+            set age(age) {
+                this.#age = age
+            }
+
+            get group() { 
+                return this.#group
+            }
+            set group(group) {
+                this.#group = group
+            }
+
+            get mean_score() { 
+                return this.#mean_score
+            }
+            set mean_score(mean_score) {
+                this.#mean_score = mean_score
+            }
+
+            }
+            
+            const me = new Student('Dana',19,'125',3.5)
+            console.log(me.name+'\n'+me.age+'\n'+me.group+'\n'+me.mean_score)
+            me.mean_score = 5.0
+            console.log(me.name+'\n'+me.age+'\n'+me.group+'\n'+me.mean_score)
+
+		</script>
+</body>
+</html>

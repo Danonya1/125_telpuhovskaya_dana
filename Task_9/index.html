@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task_9</title>
+</head>
+<body>
+		<script>
+            class Warrior {
+                #name
+                #attack
+                #health
+
+            constructor(name, attack, health) {
+                this.#name = name
+                this.#attack = attack
+                this.#health = health
+            }   
+
+            get name() { 
+                return this.#name
+            }
+            get attack() { 
+                return this.#attack
+            }
+            get health() { 
+                return this.#health
+            }
+            set health(health) { 
+                this.#health = health
+            }
+
+            takeDamage(warrior) {
+                this.#health -= warrior.#attack
+            }
+
+        }
+        class ArmoredWarrior extends Warrior {
+            armor
+            
+            get armor() { 
+                return this.armor
+            }
+            takeDamage(warrior) {
+                let new_damage = this.attack - this.armor
+                if (new_damage <=0) {
+                    new_damage = 1
+                }
+                this.health-= new_damage
+            }
+
+        }
+        const test = new ArmoredWarrior('Vion',4,10)
+        test.armor = 8
+        console.log(test)
+        test.takeDamage(test)
+        console.log(test.health)
+
+		</script>
+</body>
+</html>

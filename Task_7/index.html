@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task_7</title>
+</head>
+<body>
+		<script>
+            class TimeController {
+                getActionWithMaxTime(titles,time_for_titles) {
+                    let maxTime = Math.max.apply(null, time_for_titles)
+                    let maxTime_index = time_for_titles.indexOf(maxTime)
+                    return titles[maxTime_index]
+                }
+            }
+            const test = new TimeController
+            const titles = ['math', 'english', 'science']
+            const time = [20,55,40]
+            console.log(test.getActionWithMaxTime(titles,time))
+            
+
+		</script>
+</body>
+</html>

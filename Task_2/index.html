@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task_2</title>
+</head>
+<body>
+		<script>
+			class Car {
+                #name
+                #brand
+                #year
+                #total_distance
+
+            constructor(name, brand, year, total_distance) {
+                this.#name = name
+                this.#brand = brand
+                this.#year = year
+                this.#total_distance = total_distance
+            }
+
+            get name() { 
+                return this.#name
+            }
+            set name(name) {
+                this.#name = name
+            }
+
+            get brand() { 
+                return this.#brand
+            }
+            set brand(brand) {
+                this.#brand = brand
+            }
+
+            get year() { 
+                return this.#year
+            }
+            set year(year) {
+                this.#year = year
+            }
+
+            get total_distance() { 
+                return this.#total_distance
+            }
+            set total_distance(total_distance) {
+                this.#total_distance = total_distance
+            }
+
+            trip(distance) {
+                this.#total_distance+= distance
+            }
+            
+            }
+            
+            const car = new Car('MyCar','Toyota',2003,2900)
+            console.log(car.name+'\n'+car.brand+'\n'+car.year+'\n'+car.total_distance)
+            car.name = 'HisCar'
+            car.trip(10000)
+            console.log(car.name+'\n'+car.brand+'\n'+car.year+'\n'+car.total_distance)
+
+		</script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task_3</title>
+</head>
+<body>
+		<script>
+			class Atm {
+                #bill_100
+                #bill_500
+                #bill_1000
+
+            constructor() {
+                this.#bill_100 = 0
+                this.#bill_500 = 0
+                this.#bill_1000 = 0
+            }
+
+            get bill_100() { 
+                return this.#bill_100
+            }
+
+            get bill_500() { 
+                return this.#bill_500
+            }
+
+            get bill_1000() { 
+                return this.#bill_1000
+            }
+
+
+            load(count_100,count_500,count_1000) {
+                this.#bill_100+= count_100
+                this.#bill_500+= count_500
+                this.#bill_1000+= count_1000
+            }
+            give(takeout_100,takeout_500,takeout_1000) {
+                if (takeout_100<=this.#bill_100 && takeout_500<=this.#bill_500 && takeout_1000 <= this.#bill_1000) {
+                    this.#bill_100-= takeout_100
+                    this.#bill_500-= takeout_500
+                    this.#bill_1000-= takeout_1000
+                } else {
+                    return false
+                }
+            }
+            
+            }
+            
+            const process = new Atm()
+            console.log(process.bill_100+'\n'+process.bill_500+'\n'+process.bill_1000)
+
+            process.load(0,2,3)
+            process.give(0,1,0)
+
+
+
+            console.log(process.bill_100+'\n'+process.bill_500+'\n'+process.bill_1000)
+
+		</script>
+</body>
+</html>
